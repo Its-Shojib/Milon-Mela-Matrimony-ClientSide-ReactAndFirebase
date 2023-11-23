@@ -10,6 +10,7 @@ import animation from '../../assets/Login/loginAnimation.json'
 import { Helmet } from "react-helmet-async";
 import Social_Login from "../../Shared-Compo/Social_Login";
 import useAuth from "../../Hooks/useAuth";
+import { Button } from "@material-tailwind/react";
 
 
 const Login = () => {
@@ -76,8 +77,8 @@ const Login = () => {
                     </div>
                     <hr className="my-3" />
 
-                    <button className=" btn btn-outline w-full" type="submit">
-                        Login</button>
+                    <Button className=" btn btn-outline w-full" type="submit">
+                        Login</Button>
 
                 </form>
 
