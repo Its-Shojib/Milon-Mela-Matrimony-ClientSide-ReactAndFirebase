@@ -11,13 +11,21 @@
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.4",
+    "@tanstack/react-query": "^5.8.4",
+    "axios": "^1.6.2",
     "firebase": "^10.6.0",
     "localforage": "^1.10.0",
+    "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.1",
+    "react-hook-form": "^7.48.2",
+    "react-icons": "^4.12.0",
     "react-router-dom": "^6.20.0",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "sweetalert2": "^11.10.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

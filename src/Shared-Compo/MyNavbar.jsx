@@ -1,4 +1,4 @@
-import { Navbar, MobileNav, Typography, Button, IconButton } from "@material-tailwind/react";
+import { Navbar, Typography, Button, IconButton, Collapse } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import img from '../assets/Home/MilonMela.png'
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ const MyNavbar = () => {
     <ul className="flex flex-col gap-2 md:flex-row md:items-center md:gap-6">
       <Typography
         as="li"
-        variant="medium"
+        variant="h6"
 
         className="p-1 font-normal"
       >
@@ -27,8 +27,7 @@ const MyNavbar = () => {
       </Typography>
       <Typography
         as="li"
-        variant="medium"
-
+        variant="h6"
         className="p-1 font-normal"
       >
        <Link to='/biodatas' className="flex items-center">
@@ -37,7 +36,7 @@ const MyNavbar = () => {
       </Typography>
       <Typography
         as="li"
-        variant="medium"
+        variant="h6"
 
         className="p-1 font-normal"
       >
@@ -47,7 +46,7 @@ const MyNavbar = () => {
       </Typography>
       <Typography
         as="li"
-        variant="medium"
+        variant="h6"
 
         className="p-1 font-normal"
       >
@@ -57,7 +56,7 @@ const MyNavbar = () => {
       </Typography>
       <Typography
         as="li"
-        variant="medium"
+        variant="h6"
 
         className="p-1 font-normal"
       >
@@ -67,7 +66,7 @@ const MyNavbar = () => {
       </Typography>
       <Typography
         as="li"
-        variant="medium"
+        variant="h6"
 
         className="p-1 font-normal"
       >
@@ -124,7 +123,7 @@ const MyNavbar = () => {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           {navList}
           <div className="flex items-center gap-x-1">
             <Button fullWidth variant="text" size="sm" className="">
@@ -134,7 +133,7 @@ const MyNavbar = () => {
               <span>Sign in</span>
             </Button>
           </div>
-        </MobileNav>
+          </Collapse >
       </Navbar>
   )
 }
