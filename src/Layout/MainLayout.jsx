@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../Shared-Compo/Navbar";
+
 import Footer from "../Shared-Compo/Footer";
+import MyNavbar from "../Shared-Compo/MyNavbar";
 
 
 const MainLayout = () => {
     return (
         <div>
             <div className="max-w-screen-xl mx-auto">
-                <Navbar></Navbar>
+                <MyNavbar></MyNavbar>
             </div>
             <div className="max-w-screen-xl mx-auto">
                 <Outlet></Outlet>
