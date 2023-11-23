@@ -6,7 +6,7 @@ import useAuth from "../Hooks/useAuth";
 
 const MyNavbar = () => {
   const [openNav, setOpenNav] = useState(false);
-  let {user} = useAuth();
+  let { user, Logout } = useAuth();
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -68,16 +68,26 @@ const MyNavbar = () => {
           </Link>
         </Typography>
       }
-      <Typography
-        as="li"
-        variant="h6"
-        className="p-1 font-normal"
-      >
-        <Link to='/login' className="flex items-center">
-          Login
-        </Link>
-      </Typography>
-    </ul>
+      {
+        user ? <><Typography
+          as="li"
+          variant="h6"
+          className="p-1 font-normal"
+        >
+          <Button onClick={() => Logout().then().catch()} className="flex items-center">
+            Signout
+          </Button>
+        </Typography></> : <><Typography
+          as="li"
+          variant="h6"
+          className="p-1 font-normal"
+        >
+          <Link to='/login' className="flex items-center">
+            Login
+          </Link>
+        </Typography></>
+      }
+    </ul >
   );
 
 

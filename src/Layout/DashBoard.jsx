@@ -3,16 +3,23 @@ import { FaEdit, FaEye, FaHeart, FaHome, FaPhone,  FaSignOutAlt, FaUser, FaUsers
 import { GiLovers } from "react-icons/gi";
 import { TbListDetails } from "react-icons/tb";
 import { MdOutlineWorkspacePremium } from "react-icons/md";
+import useAdmin from './../Hooks/useAdmin';
+import useAuth from '../Hooks/useAuth';
+import { Helmet } from 'react-helmet-async';
 
 const DashBoard = () => {
-    let isAdmin = false;
+    let [isAdmin] = useAdmin();
+    let {Logout} = useAuth()
     return (
         <div>
+            <Helmet>
+                <title>Milon Mela | DashBoard</title>
+            </Helmet>
             <div className="max-w-screen-xl mx-auto flex">
-                <div className="w-64 min-h-screen bg-[#ca6fbf]">
+                <div className="w-64 min-h-screen bg-black text-white">
                     <div className='text-center my-10'>
-                        <h1 className='text-3xl font-bold'>Bistro Boss</h1>
-                        <p className='text-xl'>Restaurants</p>
+                        <h1 className='text-3xl font-bold'>Milon Mela</h1>
+                        <p className='text-xl'>Matrimony</p>
                     </div>
                     {
                         isAdmin ? <>
@@ -41,7 +48,7 @@ const DashBoard = () => {
                                     to='success-story' ><FaWineBottle></FaWineBottle>Success Story</NavLink>
                                 </li>
                                 <li >
-                                    <NavLink className='flex items-center font-bold gap-2' ><FaSignOutAlt></FaSignOutAlt> Logout</NavLink>
+                                    <NavLink onClick={()=>Logout().then().catch()} className='flex items-center font-bold gap-2' ><FaSignOutAlt></FaSignOutAlt> Logout</NavLink>
                                 </li>
                             </ul>
                         </> : <>
@@ -70,7 +77,7 @@ const DashBoard = () => {
                                     to='got-married' ><GiLovers></GiLovers>Got Married</NavLink>
                                 </li>
                                 <li >
-                                    <NavLink className='flex items-center font-bold gap-2' ><FaSignOutAlt></FaSignOutAlt> Logout</NavLink>
+                                    <NavLink onClick={()=>Logout().then().catch()} className='flex items-center font-bold gap-2' ><FaSignOutAlt></FaSignOutAlt> Logout</NavLink>
                                 </li>
                             </ul>
                         </>

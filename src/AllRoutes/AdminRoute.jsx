@@ -1,8 +1,8 @@
 import { Navigate, useLocation } from "react-router-dom";
-
 import PropTypes from 'prop-types';
-import useAuth from "../Hooks/useAuth";
 import useAdmin from "../Hooks/useAdmin";
+import useAuth from "../Hooks/useAuth";
+import { Spinner } from "@material-tailwind/react";
 
 const AdminRoute = ({ children }) => {
     const {user, loading} = useAuth();
@@ -10,7 +10,9 @@ const AdminRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading || isAdminLoading) {
-        return <progress className="progress w-56"></progress>
+        return <div className="flex justify-center items-center min-h-[600px]">
+        <Spinner className="h-12 w-12" />
+    </div>
     }
 
     if (user && isAdmin) {

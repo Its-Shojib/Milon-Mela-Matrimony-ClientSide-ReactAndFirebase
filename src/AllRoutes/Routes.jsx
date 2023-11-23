@@ -17,84 +17,86 @@ import GotMarried from "../Pages/GotMarried/GotMarried";
 import ApproveContact from './../Pages/ApproveContacts/ApproveContact';
 import ApprovePremium from "../Pages/ApprovePremium/ApprovePremium";
 import SuccessStory from "../Pages/SuccessStory/SuccessStory";
+import PrivateRoutes from './PrivateRoutes';
+import AdminRoute from './AdminRoute';
 
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout></MainLayout>,
-        children:[
+        children: [
             {
                 index: true,
                 element: <Home></Home>
             },
             {
-                path:'/biodatas',
-                element:<Biodatas></Biodatas>
+                path: '/biodatas',
+                element: <Biodatas></Biodatas>
             },
             {
-                path:'/about-us',
-                element:<AboutUs></AboutUs>
+                path: '/about-us',
+                element: <AboutUs></AboutUs>
             },
             {
-                path:'/contact-us',
-                element:<ContactUs></ContactUs>
+                path: '/contact-us',
+                element: <ContactUs></ContactUs>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
         ]
     },
     {
-        path:'/dashboard',
-        element:<DashBoard></DashBoard>,
-        children:[
+        path: '/dashboard',
+        element: <PrivateRoutes><DashBoard></DashBoard></PrivateRoutes>,
+        children: [
             //Admin only routes
             {
-                path:'admin-home',
-                element: <AdminHome></AdminHome>
+                path: 'admin-home',
+                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
             },
             {
-                path:'manage-user',
-                element: <ManageUser></ManageUser>
+                path: 'manage-user',
+                element: <AdminRoute><ManageUser></ManageUser></AdminRoute>
             },
             {
-                path:'approve-con-request',
-                element: <ApproveContact></ApproveContact>
+                path: 'approve-con-request',
+                element: <AdminRoute><ApproveContact></ApproveContact></AdminRoute>
             },
             {
-                path:'approve-premium',
-                element: <ApprovePremium></ApprovePremium>
+                path: 'approve-premium',
+                element: <AdminRoute><ApprovePremium></ApprovePremium></AdminRoute>
             },
             {
-                path:'success-story',
-                element: <SuccessStory></SuccessStory>
+                path: 'success-story',
+                element: <AdminRoute><SuccessStory></SuccessStory></AdminRoute>
             },
             //user only routes
             {
-                path:'edit-biodata',
-                element: <EditBioData></EditBioData>
+                path: 'edit-biodata',
+                element: <PrivateRoutes><EditBioData></EditBioData></PrivateRoutes>
             },
             {
-                path:'view-bio-data',
-                element: <ViewBioData></ViewBioData>
+                path: 'view-bio-data',
+                element: <PrivateRoutes><ViewBioData></ViewBioData></PrivateRoutes>
             },
             {
-                path:'my-req-contacts',
-                element: <MyReqContacts></MyReqContacts>
+                path: 'my-req-contacts',
+                element:<PrivateRoutes> <MyReqContacts></MyReqContacts></PrivateRoutes>
             },
             {
-                path:'favorites',
-                element: <Favorites></Favorites>
+                path: 'favorites',
+                element: <PrivateRoutes><Favorites></Favorites></PrivateRoutes>
             },
             {
-                path:'got-married',
-                element: <GotMarried></GotMarried>
+                path: 'got-married',
+                element: <PrivateRoutes><GotMarried></GotMarried></PrivateRoutes>
             },
         ]
     }
