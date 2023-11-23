@@ -6,6 +6,7 @@ import AboutUs from "../Pages/About-Us/AboutUs";
 import ContactUs from "../Pages/Contact-us/ContactUs";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register.jsx/Register";
+import DashBoard from "../Layout/DashBoard";
 
 
 const router = createBrowserRouter([
@@ -39,5 +40,9 @@ const router = createBrowserRouter([
             },
         ]
     },
+    {
+        path:'/dashboard',
+        element:<DashBoard></DashBoard>
+    }
 ]);
 export default router;

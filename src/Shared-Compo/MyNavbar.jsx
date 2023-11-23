@@ -18,7 +18,7 @@ const MyNavbar = () => {
       <Typography
         as="li"
         variant="medium"
-        color="blue-gray"
+
         className="p-1 font-normal"
       >
         <Link to='/' className="flex items-center">
@@ -28,7 +28,7 @@ const MyNavbar = () => {
       <Typography
         as="li"
         variant="medium"
-        color="blue-gray"
+
         className="p-1 font-normal"
       >
        <Link to='/biodatas' className="flex items-center">
@@ -38,7 +38,7 @@ const MyNavbar = () => {
       <Typography
         as="li"
         variant="medium"
-        color="blue-gray"
+
         className="p-1 font-normal"
       >
        <Link to='/about-us' className="flex items-center">
@@ -48,7 +48,7 @@ const MyNavbar = () => {
       <Typography
         as="li"
         variant="medium"
-        color="blue-gray"
+
         className="p-1 font-normal"
       >
        <Link to='/contact-us' className="flex items-center">
@@ -58,7 +58,17 @@ const MyNavbar = () => {
       <Typography
         as="li"
         variant="medium"
-        color="blue-gray"
+
+        className="p-1 font-normal"
+      >
+       <Link to='/dashboard' className="flex items-center">
+          Dashboard
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="medium"
+
         className="p-1 font-normal"
       >
        <Link to='/login' className="flex items-center">
@@ -70,8 +80,8 @@ const MyNavbar = () => {
 
 
   return (
-      <Navbar className="sticky top-0 z-10 h-max">
-        <div className="flex items-center justify-between text-blue-gray-900">
+      <Navbar className="fixed top-0 z-10 h-max bg-blue-gray-900 max-w-screen-xl">
+        <div className="flex items-center justify-between ">
           <img className="w-64 h-12" src={img} alt="" />
           <div className="flex items-center gap-4">
             <div className="mr-4 hidden lg:block">{navList}</div>
