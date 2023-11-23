@@ -1,11 +1,11 @@
-import { Button } from "@material-tailwind/react";
 import { createBrowserRouter } from "react-router-dom";
+import MainLayout from "../Layout/MainLayout";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <div><Button>Button</Button></div>,
+        element: <MainLayout></MainLayout>,
     },
 ]);
 export default router;
