@@ -5,8 +5,8 @@ import "./index.css";
 import router from "./AllRoutes/Routes";
 import { ThemeProvider } from "@material-tailwind/react";
 import { HelmetProvider } from "react-helmet-async";
-import AuthProvider from "./Pages/AuthProvider/AuthProvider";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import AuthProvider from "./AuthProvider/AuthProvider";
 
 const queryClient = new QueryClient()
 

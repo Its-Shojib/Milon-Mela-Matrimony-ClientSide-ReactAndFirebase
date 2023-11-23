@@ -9,7 +9,7 @@ const DashBoard = () => {
     return (
         <div>
             <div className="max-w-screen-xl mx-auto flex">
-                <div className="w-64 min-h-screen bg-[#D1A054]">
+                <div className="w-64 min-h-screen bg-[#ca6fbf]">
                     <div className='text-center my-10'>
                         <h1 className='text-3xl font-bold'>Bistro Boss</h1>
                         <p className='text-xl'>Restaurants</p>
