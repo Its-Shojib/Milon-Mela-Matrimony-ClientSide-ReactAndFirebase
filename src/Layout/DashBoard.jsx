@@ -83,7 +83,7 @@ const DashBoard = () => {
                         </>
                     }
 
-                    <hr className='divider divider-horizontal w-full my-5' />
+                    <hr className='w-full my-5' />
 
                     <ul className='menu flex flex-col px-6 space-y-3'>
                         <li >
