@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const ApprovePremium = () => {
 
     let axiosSecure = useAxiosSecure();
-    const { data: premiumReqUser = [],refetch } = useQuery({
+    const { data: premiumReqUser = [], refetch } = useQuery({
         queryKey: ['premiumReqUser'],
         queryFn: async () => {
             const res = await axiosSecure.get('/premiumReqUser');
@@ -29,12 +29,17 @@ const ApprovePremium = () => {
                     .then(res => {
                         console.log(res.data);
                         if (res.data.modifiedCount > 0) {
-                            Swal.fire({
-                                title: "Updated!",
-                                text: 'Biodata Updated',
-                                icon: "success"
-                            });
-                            refetch();
+                            axiosSecure.delete(`/premiumReqDelete/${email}`)
+                                .then(res => {
+                                    if (res.data.deletedCount > 0) {
+                                        Swal.fire({
+                                            title: "Updated!",
+                                            text: 'User is Premium Now!',
+                                            icon: "success"
+                                        });
+                                        refetch();
+                                    }
+                                })
                         }
                     })
             }
@@ -65,7 +70,7 @@ const ApprovePremium = () => {
                                 <td className="p-4 border-b border-blue-gray-50">
                                     {item?.Biodata_id}
                                 </td>
-                                <th className="p-4 border-b border-blue-gray-50"><Button onClick={()=>HandleMakePremium(item?.Email)}>Make Premium</Button></th>
+                                <th className="p-4 border-b border-blue-gray-50"><Button onClick={() => HandleMakePremium(item?.Email)}>Make Premium</Button></th>
                             </tr>
                             )}
                     </tbody>
