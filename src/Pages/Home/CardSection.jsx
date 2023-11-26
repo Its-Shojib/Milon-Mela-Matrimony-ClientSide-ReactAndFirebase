@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
 
 const CardSection = ({ item }) => {
-
-    let { bioId, _id, Image, Gender, Age, Ocupation, PermanentDiv } = item;
     let goto = useNavigate()
-    console.log(_id);
+    let { bioId, _id, Image, Gender, Age, Ocupation, PermanentDiv } = item;
+
     return (
         <Card className="mt-6 bg-gray-300">
             <CardHeader color="blue-gray" className="mt-5">

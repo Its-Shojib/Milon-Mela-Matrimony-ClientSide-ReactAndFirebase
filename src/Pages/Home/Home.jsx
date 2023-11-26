@@ -6,7 +6,6 @@ import CardSection from "./CardSection";
 import SuccessCounter from "./SuccessCounter";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
-
 const Home = () => {
     // let axiosSecure = useAxiosSecure();
     let axiosPublic = useAxiosPublic()
@@ -17,6 +16,7 @@ const Home = () => {
             return res.data;
         }
     })
+
     return (
         <div>
             <Banner></Banner>
