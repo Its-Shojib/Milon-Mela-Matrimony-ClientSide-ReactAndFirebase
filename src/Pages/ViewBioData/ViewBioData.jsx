@@ -2,20 +2,22 @@ import {
     Card,
     CardHeader,
     CardBody,
-    Typography,
     Button,
 } from "@material-tailwind/react";
 import useBioData from "../../Hooks/useBioData";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import useAuth from "../../Hooks/useAuth";
+import usePremium from "../../Hooks/usePremium";
 
 const ViewBioData = () => {
     let axiosSecure = useAxiosSecure();
     let {user} = useAuth();
+    let [isPremium] = usePremium();
     let { biodata } = useBioData();
     let { bioId, _id, Name, Image, Gender, Dob, Height, Weight, Age, Ocupation, Race, FaName, MoName, PermanentDiv, PresentDiv, PartnerAgeExp, PartnerHeightExp, PartnerWeightExp, email, Mobile } = biodata;
 
+    console.log(isPremium);
 
     let HandleMakePremium = () => {
         Swal.fire({
@@ -58,16 +60,16 @@ const ViewBioData = () => {
         });
     }
     return (
-        <div className="w-9/12 mx-auto my-10">
+        <div className="w-9/12 mx-auto mt-5">
             <div className="w-72 mx-auto">
                 <Card className="h-64">
                     <CardHeader floated={false}>
                         <img className="h-44 w-full" src={Image} alt="profile-picture" />
                     </CardHeader>
                     <CardBody className="text-center">
-                        <Typography variant="h4" color="blue-gray">
+                        <p className="text-lg text-black">
                             {Name}
-                        </Typography>
+                        </p>
                     </CardBody>
                 </Card>
             </div>

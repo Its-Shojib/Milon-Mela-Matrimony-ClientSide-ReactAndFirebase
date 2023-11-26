@@ -48,8 +48,7 @@ const EditBioData = () => {
             console.log(biodatas);
             const biodataRes = await axiosSecure.patch(`/edit-biodata/${user?.email}`, biodatas);
             console.log(biodataRes.data)
-            if (biodataRes?.data?.modifiedCount) {
-                // show success popup
+            if (biodataRes?.data?.modifiedCount || biodataRes?.data?.upsertedCount || biodataRes?.data?.matchedCount) {
                 reset();
                 Swal.fire({
                     position: "top-middle",
