@@ -1,17 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import useAuth from "./useAuth";
-import useAxiosSecure from "./useAxiosSecure";
+import useAxiosPublic from "./useAxiosPublic";
 
 const useBioData = () => {
-    let axiosSecure = useAxiosSecure();
-    let {user} = useAuth();
-    const {  data: biodata = {} } = useQuery({
-        queryKey: ['biodata',user?.email],
-        queryFn: async () =>{
-            const res = await axiosSecure.get(`/biodata?email=${user?.email}`);
+    let axiosPublic = useAxiosPublic();
+    const { data: biodataCollection = [], refetch } = useQuery({
+        queryKey: ['biodataCollection'],
+        queryFn: async () => {
+            const res = await axiosPublic.get('/biodata');
             return res.data;
         }
     })
-    return {biodata};
+    return [biodataCollection, refetch];
 }
 export default useBioData;

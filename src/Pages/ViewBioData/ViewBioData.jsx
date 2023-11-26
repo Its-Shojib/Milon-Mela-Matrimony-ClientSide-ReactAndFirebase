@@ -4,20 +4,22 @@ import {
     CardBody,
     Button,
 } from "@material-tailwind/react";
-import useBioData from "../../Hooks/useBioData";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import useAuth from "../../Hooks/useAuth";
-import usePremium from "../../Hooks/usePremium";
+import { useQuery } from "@tanstack/react-query";
 
 const ViewBioData = () => {
     let axiosSecure = useAxiosSecure();
     let {user} = useAuth();
-    let [isPremium] = usePremium();
-    let { biodata } = useBioData();
+    const {  data: biodata = {} } = useQuery({
+        queryKey: ['biodata',user?.email],
+        queryFn: async () =>{
+            const res = await axiosSecure.get(`/viewBiodata?email=${user?.email}`);
+            return res.data;
+        }
+    })
     let { bioId, _id, Name, Image, Gender, Dob, Height, Weight, Age, Ocupation, Race, FaName, MoName, PermanentDiv, PresentDiv, PartnerAgeExp, PartnerHeightExp, PartnerWeightExp, email, Mobile } = biodata;
-
-    console.log(isPremium);
 
     let HandleMakePremium = () => {
         Swal.fire({

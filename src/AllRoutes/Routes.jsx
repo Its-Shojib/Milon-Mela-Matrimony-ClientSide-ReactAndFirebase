@@ -19,6 +19,7 @@ import ApprovePremium from "../Pages/ApprovePremium/ApprovePremium";
 import SuccessStory from "../Pages/SuccessStory/SuccessStory";
 import PrivateRoutes from './PrivateRoutes';
 import AdminRoute from './AdminRoute';
+import ViewProfile from "../Pages/ViewProfile/ViewProfile";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,12 @@ const router = createBrowserRouter([
             {
                 path: '/contact-us',
                 element: <ContactUs></ContactUs>
+            },
+            {
+                path: '/biodata/profile/:id',
+                element:<PrivateRoutes><ViewProfile></ViewProfile></PrivateRoutes>,
+                loader: ({params})=> fetch(`http://localhost:5000/biodata/profile/${params.id}`)
+
             },
             {
                 path: '/login',
@@ -88,7 +95,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'my-req-contacts',
-                element:<PrivateRoutes> <MyReqContacts></MyReqContacts></PrivateRoutes>
+                element: <PrivateRoutes> <MyReqContacts></MyReqContacts></PrivateRoutes>
             },
             {
                 path: 'favorites',
