@@ -42,6 +42,6 @@ const CardSection = ({ item }) => {
     )
 }
 CardSection.propTypes = {
-    item: PropTypes.node,
+    item: PropTypes.object,
 }
 export default CardSection;

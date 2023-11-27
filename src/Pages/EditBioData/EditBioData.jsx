@@ -25,6 +25,7 @@ const EditBioData = () => {
         });
         if (res.data.success) {
             // now send the menu item data to the server with the image url
+            let Age = parseInt(data?.age)
             const biodatas = {
                 Name: data?.name,
                 Image: res?.data?.data?.display_url,
@@ -32,7 +33,7 @@ const EditBioData = () => {
                 Dob: data?.DoB,
                 Height: data?.height,
                 Weight: data?.weight,
-                Age: data?.age,
+                Age,
                 Ocupation: data?.ocupation,
                 Race: data?.race,
                 FaName: data?.fatherName,

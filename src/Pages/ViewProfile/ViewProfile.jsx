@@ -60,10 +60,10 @@ const ViewProfile = () => {
                                 <h1 className="text-2xl font-bold">Personal Info</h1>
                                 <p>Bio-Id:{bioId}</p>
                                 <p>Name:{Name}</p>
-                                <p>Date of Birth: {Dob}</p>
-                                <p>Age: {Age}</p>
                                 <p>Father Name: {FaName}</p>
                                 <p>Mother Name:{MoName}</p>
+                                <p>Date of Birth: {Dob}</p>
+                                <p>Age: {Age}</p>
                             </div>
                             <div className="w-5/12">
                                 <img className="w-52 h-48 ml-20" src={Image} alt="" />

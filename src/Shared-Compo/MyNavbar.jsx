@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import img from '../assets/Home/MilonMela.png'
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
+import useAdmin from "../Hooks/useAdmin";
 
 const MyNavbar = () => {
   const [openNav, setOpenNav] = useState(false);
   let { user, Logout } = useAuth();
+  let [isAdmin] = useAdmin()
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -57,16 +59,18 @@ const MyNavbar = () => {
       </Typography>
 
       {
-        user && <Typography
-          as="li"
-          variant="h6"
-
-          className="p-1 font-normal"
-        >
-          <Link to='/dashboard' className="flex items-center">
+        user && isAdmin ? <><Typography as="li" variant="h6" className="p-1 font-normal">
+          <Link to='/dashboard/admin-home' className="flex items-center">
             Dashboard
           </Link>
-        </Typography>
+        </Typography></> : <></>
+      }
+      {
+        user && !isAdmin ? <><Typography as="li" variant="h6" className="p-1 font-normal">
+          <Link to='/dashboard/view-bio-data' className="flex items-center">
+            Dashboard
+          </Link>
+        </Typography></> : <></>
       }
       {
         user ? <><Typography

@@ -27,12 +27,12 @@ const DashBoard = () => {
                             <li >
                                     <NavLink className='flex items-center font-bold gap-2' 
                                     to='admin-home' >
-                                        <FaHome></FaHome> Admin Home</NavLink>
+                                        <FaHome></FaHome>Admin Home</NavLink>
                                 </li>
                                 <li >
                                     <NavLink className='flex items-center font-bold gap-2' 
                                     to='manage-user' >
-                                        <FaUsers></FaUsers> Manage Users</NavLink>
+                                        <FaUsers></FaUsers>Manage Users</NavLink>
                                 </li>
                                 <li >
                                     <NavLink className='flex items-center font-bold gap-2' 
