@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Button, Card } from "@material-tailwind/react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const ApprovePremium = () => {
 
@@ -48,6 +49,7 @@ const ApprovePremium = () => {
 
     return (
         <div className="w-11/12 mx-auto my-10">
+            <Helmet><title>Milon Mela | Approve Premium</title></Helmet>
             <Card className="h-full w-full">
                 <table className="w-full min-w-max table-auto text-left">
                     <thead>
