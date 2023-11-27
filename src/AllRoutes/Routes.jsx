@@ -20,6 +20,7 @@ import SuccessStory from "../Pages/SuccessStory/SuccessStory";
 import PrivateRoutes from './PrivateRoutes';
 import AdminRoute from './AdminRoute';
 import ViewProfile from "../Pages/ViewProfile/ViewProfile";
+import Checkout from "../Pages/Checkout/Checkout";
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,12 @@ const router = createBrowserRouter([
                 path: '/biodata/profile/:id',
                 element:<PrivateRoutes><ViewProfile></ViewProfile></PrivateRoutes>,
                 loader: ({params})=> fetch(`http://localhost:5000/biodata/profile/${params.id}`)
+
+            },
+            {
+                path: '/checkout/:id',
+                element:<PrivateRoutes><Checkout></Checkout></PrivateRoutes>,
+                loader: ({params})=> fetch(`http://localhost:5000/checkout/${params.id}`)
 
             },
             {

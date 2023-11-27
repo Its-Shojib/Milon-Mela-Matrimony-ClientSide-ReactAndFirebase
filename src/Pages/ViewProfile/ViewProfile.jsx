@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import usePremium from './../../Hooks/usePremium';
 import { Button } from "@material-tailwind/react";
 import useBioData from "../../Hooks/useBioData";
@@ -10,7 +10,8 @@ import 'animate.css';
 
 const ViewProfile = () => {
     let profile = useLoaderData();
-    let axiosSecure = useAxiosSecure()
+    let axiosSecure = useAxiosSecure();
+    let goto = useNavigate();
     let { bioId, _id, Name, Image, Gender, Dob, Height, Weight, Age, Ocupation, Race, FaName, MoName, PermanentDiv, PresentDiv, PartnerAgeExp, PartnerHeightExp, PartnerWeightExp, email, Mobile } = profile;
     let [isPremium] = usePremium();
     let { user } = useAuth();
@@ -92,7 +93,7 @@ const ViewProfile = () => {
                         }
                         <div className="flex gap-10">
                             <Button onClick={() => handleAddToFavorite()} className="my-4">Add To Favorite</Button>
-                            {!isPremium && <Button className="my-4">Request Contact Info</Button>}
+                            {!isPremium && <Button onClick={()=> goto(`/checkout/${_id}`) }className="my-4">Request Contact Info</Button>}
                         </div>
                     </div>
 
