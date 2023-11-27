@@ -5,6 +5,7 @@ import How_Works from "./How_Works";
 import CardSection from "./CardSection";
 import SuccessCounter from "./SuccessCounter";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import SuccessReview from "./SuccessReview";
 
 const Home = () => {
     // let axiosSecure = useAxiosSecure();
@@ -32,6 +33,7 @@ const Home = () => {
             <How_Works></How_Works>
             <h1 className="text-center text-4xl mt-10 mb-5 font-bold"><span className="text-orange-900">Success</span> Counter</h1>
             <SuccessCounter></SuccessCounter>
+            <SuccessReview></SuccessReview>
         </div>
     )
 }
