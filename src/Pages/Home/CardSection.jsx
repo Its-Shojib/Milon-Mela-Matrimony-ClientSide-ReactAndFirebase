@@ -7,30 +7,30 @@ const CardSection = ({ item }) => {
     let { bioId, _id, Image, Gender, Age, Ocupation, PermanentDiv } = item;
 
     return (
-        <Card className="mt-6 bg-gray-300">
-            <CardHeader color="blue-gray" className="mt-5">
+        <Card className="mt-6 bg-[#172935]">
+            <CardHeader color="white" className="mt-5">
                 <img className="h-64 w-full"
                     src={Image}
                     alt="card-image"
                 />
             </CardHeader>
             <CardBody>
-                <Typography variant="h5" color="blue-gray" className="text-center mb-3">
+                <Typography variant="h5" color="white" className="text-center mb-3">
                     Biodata Id : {bioId}
                 </Typography>
                 <div className="flex justify-between gap-5">
-                    <Typography  variant="h5" color="blue-gray">
+                    <Typography  variant="h5" color="white">
                         Gender: {Gender}
                     </Typography >
-                    <Typography variant="h5" color="blue-gray">
+                    <Typography variant="h5" color="white">
                         Age: {Age}
                     </Typography>
                 </div>
                 <div className="flex justify-between gap-5">
-                    <Typography  variant="h5" color="blue-gray">
-                        Parmanent Address: {PermanentDiv}
+                    <Typography  variant="h5" color="white">
+                        Address: {PermanentDiv}
                     </Typography >
-                    <Typography variant="h5" color="blue-gray">
+                    <Typography variant="h5" color="white">
                         Ocupation: {Ocupation}
                     </Typography>
                 </div>

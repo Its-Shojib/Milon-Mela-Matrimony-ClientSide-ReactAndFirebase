@@ -11,7 +11,7 @@ const How_Works = () => {
                 <p>Get started in Milon-Mela in 3 easy steps</p>
             </div>
 
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mt-10 ">
                 <div >
                     <Card className="mt-10">
                         <CardHeader className="relative">
