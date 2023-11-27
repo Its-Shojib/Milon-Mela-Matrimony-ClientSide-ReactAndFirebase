@@ -11,7 +11,7 @@ import './styles.css';
 import { Navigation } from 'swiper/modules';
 
 
-const SuccessStory = () => {
+const SuccessReview = () => {
     return (
         <div className='my-10 '>
             <h2 className='text-center text-3xl md:text-5xl font-bold'>Our <span className='text-rose-800'>Community</span> Says</h2>
@@ -24,4 +24,4 @@ const SuccessStory = () => {
         </div >
     )
 }
-export default SuccessStory;
+export default SuccessReview;

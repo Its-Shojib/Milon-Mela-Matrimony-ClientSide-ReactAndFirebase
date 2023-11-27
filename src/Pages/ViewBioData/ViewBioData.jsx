@@ -79,6 +79,7 @@ const ViewBioData = () => {
                 <div className="flex justify-between gap-24 my-3">
                     <div className="flex-1 bg-white p-5">
                         <h1 className="text-2xl font-bold uppercase">Contact info</h1>
+                        <p>Biodata Id: {bioId}</p>
                         <p>Phone: {Mobile}</p>
                         <p>Email: {email}</p>
                     </div>

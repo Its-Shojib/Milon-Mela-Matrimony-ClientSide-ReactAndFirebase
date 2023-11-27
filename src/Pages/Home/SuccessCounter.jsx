@@ -4,6 +4,7 @@ import img1 from '../../assets/Home/total-removebg-preview.png'
 import img2 from '../../assets/Home/image-removebg-preview.png'
 import img3 from '../../assets/Home/image-removebg-preview (1).png'
 import img4 from '../../assets/Home/image-removebg-preview (2).png'
+import useSuccessStory from '../../Hooks/useSuccessStory';
 // import useAxiosPublic from '../../Hooks/useAxiosPublic';
 
 const SuccessCounter = () => {
@@ -13,11 +14,7 @@ const SuccessCounter = () => {
     let [biodataCollection] = useBioData()
     let GirlsBio = biodataCollection.filter((item)=> item.Gender === 'female');
     let BoysBio = biodataCollection.filter((item)=> item.Gender === 'male');
-
-    //  axiosPublic.get('/marrigeCollection')
-    // .then(res=>{
-    //     setMarrigeCounter(res.data);
-    // })
+    let [SuccessStory] = useSuccessStory();
 
     return (
         <div className="bg-black min-h-[250px] my-5 text-white flex justify-center items-center">
@@ -36,7 +33,7 @@ const SuccessCounter = () => {
                 </div>
                 <div>
                     <img className='w-40' src={img4} alt="" />
-                    {/* <h1 className='text-2xl'>Total Marrige: {marrigeCounter}</h1> */}
+                    <h1 className='text-2xl'>Total Marrige: {SuccessStory.length}</h1>
                 </div>
             </div>
         </div>
