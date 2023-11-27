@@ -6,6 +6,7 @@ import CardSection from "./CardSection";
 import SuccessCounter from "./SuccessCounter";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import SuccessReview from "./SuccessReview";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     // let axiosSecure = useAxiosSecure();
@@ -20,6 +21,7 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet><title>Milon Mela | Home</title></Helmet>
             <Banner></Banner>
             
             <h1 className="text-center text-4xl mt-10 mb-5 font-bold"><span className="text-orange-900">Premium</span> Biodatas</h1>

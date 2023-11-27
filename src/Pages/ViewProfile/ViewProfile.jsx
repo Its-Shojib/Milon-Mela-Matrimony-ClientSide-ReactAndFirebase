@@ -99,7 +99,7 @@ const ViewProfile = () => {
                 </div>
             </div>
             <div className="flex-1">
-                <div className="w-10/12 mx-auto h-screen overflow-scroll">
+                <div className="w-10/12 mx-auto h-screen overflow-y-scroll">
                     {
                         dataOfGender?.map(item => <CardSection
                             key={item._id}
