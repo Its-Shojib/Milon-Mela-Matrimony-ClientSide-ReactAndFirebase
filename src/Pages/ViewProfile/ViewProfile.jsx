@@ -51,12 +51,12 @@ const ViewProfile = () => {
             });
     }
     return (
-        <div className="flex gap-10">
+        <div className="flex flex-col md:flex-row gap-10">
             <div className="flex-1">
                 <h1 className="text-center text-3xl font-bold underline text-red-700 my-5">Bio-Data</h1>
                 <div className="flex justify-between">
-                    <div >
-                        <div className="flex justify-between">
+                    <div className="px-2">
+                        <div className="flex justify-between flex-col-reverse md:flex-row">
                             <div className="flex-1">
                                 <h1 className="text-2xl font-bold">Personal Info</h1>
                                 <p>Bio-Id:{bioId}</p>
@@ -66,8 +66,8 @@ const ViewProfile = () => {
                                 <p>Date of Birth: {Dob}</p>
                                 <p>Age: {Age}</p>
                             </div>
-                            <div className="w-5/12">
-                                <img className="w-52 h-48 ml-20" src={Image} alt="" />
+                            <div className="w-full md:w-5/12">
+                                <img className="w-full md:w-52 h-48 md:ml-20" src={Image} alt="" />
                             </div>
                         </div>
                         <h1 className="text-2xl font-bold mt-5">Details</h1>
