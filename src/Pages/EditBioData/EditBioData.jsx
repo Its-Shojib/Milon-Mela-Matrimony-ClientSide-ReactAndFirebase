@@ -5,6 +5,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import { Button, Input } from "@material-tailwind/react";
 import useAuth from "../../Hooks/useAuth";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
@@ -60,17 +61,17 @@ const EditBioData = () => {
                 });
             }
         }
-        
+
         console.log('with image url', res.data);
     };
 
     return (
 
-        <div className="">
-            <div className="text-center mt-5">
-                <h3>Makes your bio</h3>
-                <h1 className="text-4xl font-bold text-red-900">Extra-Ordinary</h1>
-            </div>
+        <div>
+            <Helmet>
+                <title>Milon-Mela | Edit Bio</title>
+            </Helmet>
+            <Section_Title title={'Extra-Ordinary'} subTitle={'Makes your bio'}></Section_Title>
             <div>
                 <div className="w-10/12 mx-auto my-10">
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -360,9 +361,6 @@ const EditBioData = () => {
                     </form>
                 </div>
             </div >
-            <Helmet>
-                <title>Milon-Mela | Edit Bio</title>
-            </Helmet>
         </div >
     )
 }

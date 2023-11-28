@@ -4,6 +4,8 @@ import Swal from "sweetalert2";
 import { Button, Card } from "@material-tailwind/react";
 import useAuth from "../../Hooks/useAuth";
 import { MdDelete } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 const Favorites = () => {
     let axiosSecure = useAxiosSecure();
@@ -45,6 +47,8 @@ const Favorites = () => {
 
     return (
         <div className="w-11/12 mx-auto my-10">
+            <Helmet><title>Milon Mela | Favorites</title></Helmet>
+            <Section_Title title={'Favorite Contact'} subTitle={'find your'}></Section_Title>
             <Card className="h-full w-full">
                 <table className="w-full min-w-max table-auto text-left">
                     <thead>

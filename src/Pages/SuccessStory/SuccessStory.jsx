@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import useSuccessStory from "../../Hooks/useSuccessStory";
 import { Dialog, DialogBody, DialogFooter } from "@material-tailwind/react";
 import { useState } from "react";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 const SuccessStory = () => {
     const [open, setOpen] = useState(false);
@@ -17,10 +18,10 @@ const SuccessStory = () => {
     };
     return (
         <div className="w-11/12 mx-auto my-10">
-            <h1 className="text-center text-3xl font-bold text-red-900 my-5">| All Married couple are here |</h1>
             <Helmet>
                 <title>Milon Mela | Success Story</title>
             </Helmet>
+            <Section_Title subTitle={'married couple'} title={'Success Story'}></Section_Title>
             <Card className="h-full w-full">
                 <table className="w-full min-w-max table-auto text-left">
                     <thead>

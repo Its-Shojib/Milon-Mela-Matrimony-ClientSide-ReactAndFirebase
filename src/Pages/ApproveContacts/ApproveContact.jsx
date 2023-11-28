@@ -3,6 +3,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Helmet } from "react-helmet-async";
 import { Button, Card } from "@material-tailwind/react";
 import Swal from "sweetalert2";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 
 const ApproveContact = () => {
@@ -53,6 +54,7 @@ const ApproveContact = () => {
         <Helmet>
             <title>Milon Mela | All Requested User</title>
         </Helmet>
+        <Section_Title title={'Requested Biodata'} subTitle={'contact info'}></Section_Title>
         <Card className="h-full w-full">
             <table className="w-full min-w-max table-auto text-left">
                 <thead>

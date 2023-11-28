@@ -7,6 +7,7 @@ import SuccessCounter from "./SuccessCounter";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import SuccessReview from "./SuccessReview";
 import { Helmet } from "react-helmet-async";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 const Home = () => {
     // let axiosSecure = useAxiosSecure();
@@ -24,8 +25,8 @@ const Home = () => {
             <Helmet><title>Milon Mela | Home</title></Helmet>
             <Banner></Banner>
             
-            <h1 className="text-center text-4xl mt-10 mb-5 font-bold"><span className="text-orange-900">Premium</span> Biodatas</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 px-2 md:p-5 gap-10 m5-10 w-10/12 mx-auto">
+            <Section_Title title={'Premium Biodata'} subTitle={'find your matched'}></Section_Title>
+            <div className="grid grid-cols-1 md:grid-cols-2 px-2 md:px-5 gap-5 md:gap-16 w-11/12 mx-auto">
                 {
                     data?.map(item => <CardSection
                         key={item._id}
@@ -33,7 +34,6 @@ const Home = () => {
                 }
             </div>
             <How_Works></How_Works>
-            <h1 className="text-center text-4xl mt-10 mb-5 font-bold"><span className="text-orange-900">Success</span> Counter</h1>
             <SuccessCounter></SuccessCounter>
             <SuccessReview></SuccessReview>
         </div>

@@ -3,6 +3,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Button, Card } from "@material-tailwind/react";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 
 const ManageUser = () => {
@@ -93,6 +94,7 @@ const ManageUser = () => {
             <Helmet>
                 <title>Milon Mela | Manage User</title>
             </Helmet>
+            <Section_Title title={'All User Data'} subTitle={'manage your'}></Section_Title>
             <Card className="h-full w-full">
                 <table className="w-full min-w-max table-auto text-left">
                     <thead>

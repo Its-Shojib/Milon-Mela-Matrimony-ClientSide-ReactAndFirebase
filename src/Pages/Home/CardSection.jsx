@@ -19,18 +19,18 @@ const CardSection = ({ item }) => {
                     Biodata Id : {bioId}
                 </Typography>
                 <div className="flex justify-between gap-5">
-                    <Typography  variant="h5" color="white">
+                    <Typography  variant="h6" color="white">
                         Gender: {Gender}
                     </Typography >
-                    <Typography variant="h5" color="white">
+                    <Typography variant="h6" color="white">
                         Age: {Age}
                     </Typography>
                 </div>
                 <div className="flex justify-between gap-5">
-                    <Typography  variant="h5" color="white">
+                    <Typography  variant="h6" color="white">
                         Address: {PermanentDiv}
                     </Typography >
-                    <Typography variant="h5" color="white">
+                    <Typography variant="h6" color="white">
                         Ocupation: {Ocupation}
                     </Typography>
                 </div>

@@ -11,14 +11,15 @@ import '@smastrom/react-rating/style.css'
 // import required modules
 import { Navigation } from 'swiper/modules';
 import useSuccessStory from '../../Hooks/useSuccessStory';
+import Section_Title from '../../Shared-Compo/Section_Title';
 
 
 const SuccessReview = () => {
     let [SuccessStory] = useSuccessStory();
     return (
         <div className='my-10 '>
-            <h2 className='text-center text-3xl md:text-3xl font-bold'>Our <span className='text-red-800'>Success</span> Story</h2>
-            <div className='bg-[#172935] rounded-lg my-10 py-5 px-4'>
+            <Section_Title subTitle={'what people says'} title={'Success Story'}></Section_Title>
+            <div className='bg-[#172935] rounded-lg my-5 py-5 px-4'>
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                     {
                         SuccessStory?.map(item => <SwiperSlide key={item?._id}>

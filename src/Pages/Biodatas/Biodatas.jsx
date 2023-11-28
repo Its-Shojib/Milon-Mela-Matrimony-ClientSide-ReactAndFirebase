@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
+import useBioData from "../../Hooks/useBioData";
 
 
 const Biodatas = () => {
@@ -12,7 +13,10 @@ const Biodatas = () => {
     let [Filtered, setFiltered] = useState();
     const [active, setActive] = useState(1);
 
-    console.log(active);
+    let [biodataCollection] = useBioData();
+    let total = biodataCollection?.length;
+    let maxvalue = Math.ceil(total/5);
+
     const { data: allBiodataCollection = [], refetch } = useQuery({
         queryKey: ['allBiodataCollection'],
         queryFn: async () => {
@@ -21,9 +25,8 @@ const Biodatas = () => {
         }
     })
 
-
     const next = () => {
-        if (active === 2) return;
+        if (active === maxvalue) return;
         setActive(active + 1);
         refetch();
     };
@@ -134,12 +137,12 @@ const Biodatas = () => {
                     </IconButton>
                     <Typography color="gray" className="font-normal">
                         Page <strong className="text-gray-900 text-xl">{active}</strong> of{" "}
-                        <strong className="text-gray-900 text-xl">2</strong>
+                        <strong className="text-gray-900 text-xl">{maxvalue}</strong>
                     </Typography>
                     <IconButton className="text-xl"
                         variant="outlined"
                         onClick={next}
-                        disabled={active === 2}
+                        disabled={active === maxvalue}
                     >
                         <ArrowRightIcon strokeWidth={2} className="h-4 w-4" />
                     </IconButton>

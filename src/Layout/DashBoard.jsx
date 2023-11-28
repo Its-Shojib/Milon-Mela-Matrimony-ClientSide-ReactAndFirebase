@@ -16,7 +16,7 @@ const DashBoard = () => {
                 <title>Milon Mela | DashBoard</title>
             </Helmet>
             <div className="max-w-screen-xl mx-auto flex">
-                <div className="w-64 min-h-screen bg-black text-white">
+                <div className="w-64 min-h-screen bg-[#172935] text-white">
                     <div className='text-center my-10'>
                         <h1 className='text-3xl font-bold'>Milon Mela</h1>
                         <p className='text-xl'>Matrimony</p>

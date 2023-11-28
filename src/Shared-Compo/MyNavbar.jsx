@@ -67,7 +67,7 @@ const MyNavbar = () => {
       }
       {
         user && !isAdmin ? <><Typography as="li" variant="h6" className="p-1 font-normal">
-          <Link to='/dashboard/view-bio-data' className="flex items-center">
+          <Link to='/dashboard/edit-biodata' className="flex items-center">
             Dashboard
           </Link>
         </Typography></> : <></>
@@ -96,7 +96,7 @@ const MyNavbar = () => {
 
 
   return (
-    <Navbar className="fixed top-0 z-10 h-max bg-blue-gray-900 max-w-screen-xl">
+    <Navbar className="fixed top-0 z-10 h-max bg-[#172935] max-w-screen-xl">
       <div className="flex items-center justify-between ">
         <img className="w-64 h-12" src={img} alt="" />
         <div className="flex items-center gap-4">

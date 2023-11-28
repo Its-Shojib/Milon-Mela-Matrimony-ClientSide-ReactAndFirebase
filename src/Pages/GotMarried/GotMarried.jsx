@@ -5,6 +5,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Button, Input, Textarea } from "@material-tailwind/react";
 import useAuth from "../../Hooks/useAuth";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
@@ -65,7 +66,7 @@ const GotMarried = () => {
     return (
         <div>
             <Helmet><title>Milon Mela | Got Married</title></Helmet>
-            <h1 className="text-center font-bold text-3xl text-red-800 my-5">| Congratulations |</h1>
+            <Section_Title title={'Marrige info'} subTitle={'tell us your'}></Section_Title>
 
             <div>
                 <div className="w-10/12 mx-auto my-10">

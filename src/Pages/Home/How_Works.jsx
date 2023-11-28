@@ -2,14 +2,12 @@ import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react
 import first from '../../assets/Home/user.jpg'
 import second from '../../assets/Home/search.jpg'
 import third from '../../assets/Home/sms.png'
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 const How_Works = () => {
     return (
-        <div className="my-10 w-10/12 mx-auto">
-            <div className="text-center ">
-                <h2 className="text-4xl font-bold">How <span className="text-red-800">Milon-Mela</span> works!</h2>
-                <p>Get started in Milon-Mela in 3 easy steps</p>
-            </div>
+        <div className="my-16 w-10/12 mx-auto">
+            <Section_Title subTitle={'Get started in 3 easy steps'} title={'How Milon Mela Works!'}></Section_Title>
 
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mt-10 ">
                 <div >

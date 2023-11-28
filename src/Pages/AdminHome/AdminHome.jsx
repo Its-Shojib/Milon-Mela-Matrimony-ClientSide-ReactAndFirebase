@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import useBioData from "../../Hooks/useBioData";
 import useAxiosSecure from './../../Hooks/useAxiosSecure';
 import { PieChart, Pie, Cell, Legend } from 'recharts';
+import { Helmet } from "react-helmet-async";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 
 
@@ -44,7 +46,9 @@ const AdminHome = () => {
 
     return (
         <div>
-            <div className="w-10/12 mx-auto grid grid-cols-2 gap-10 text-2xl my-10">
+            <Helmet>Milon Mela | Admin Home</Helmet>
+            <Section_Title title={'Admin Status'} subTitle={'all your'}></Section_Title>
+            <div className="w-10/12 mx-auto grid grid-cols-2 gap-5 text-2xl mb-5">
                 <div className="bg-[#2f1e37] p-5 text-white rounded-xl">Total Biodata: {biodataCollection.length}</div>
                 <div className="bg-[#7b6645] p-5 text-white rounded-xl">Male Biodata: {Male.length} </div>
                 <div className="bg-[#5a2636] p-5 text-white rounded-xl">Female Biodata: {Female.length} </div>

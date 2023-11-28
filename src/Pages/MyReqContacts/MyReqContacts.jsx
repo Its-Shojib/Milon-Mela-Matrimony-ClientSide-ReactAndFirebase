@@ -4,6 +4,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import Section_Title from "../../Shared-Compo/Section_Title";
 
 
 const MyReqContacts = () => {
@@ -50,6 +51,7 @@ const MyReqContacts = () => {
             <Helmet>
                 <title>Milon Mela | Requested User</title>
             </Helmet>
+            <Section_Title title={'Requested User'} subTitle={'Find contact info'}></Section_Title>
             <Card className="h-full w-full">
                 <table className="w-full min-w-max table-auto text-left">
                     <thead>
