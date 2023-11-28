@@ -35,7 +35,7 @@ const SuccessReview = () => {
                                         readOnly
                                     /></p>
                                     <p className='text-lg'>Marrige Date: {item?.marrigeDate}</p>
-                                    <p className='text-lg'>Couple Says: {item?.story}</p>
+                                    <p className='text-lg pr-10'>Couple Says: {item?.story}</p>
                                 </div>
                             </div>
                         </SwiperSlide>)

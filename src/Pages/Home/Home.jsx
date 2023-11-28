@@ -26,7 +26,7 @@ const Home = () => {
             <Banner></Banner>
             
             <Section_Title title={'Premium Biodata'} subTitle={'find your matched'}></Section_Title>
-            <div className="grid grid-cols-1 md:grid-cols-3 px-2 md:px-2 gap-5 md:gap-5 w-full mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-2 gap-5">
                 {
                     data?.map(item => <CardSection
                         key={item._id}

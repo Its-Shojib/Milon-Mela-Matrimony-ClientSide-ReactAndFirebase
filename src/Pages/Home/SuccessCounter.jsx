@@ -20,7 +20,7 @@ const SuccessCounter = () => {
     return (
         <div> 
             <Section_Title title={'Success Counter'} subTitle={'get to know our'}></Section_Title>
-            <div className="bg-black min-h-[250px] my-5 text-white flex justify-center items-center">
+            <div className="bg-[#15242f] rounded-[30px] min-h-[250px] my-5 text-white flex justify-center items-center">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16">
                     <div>
                         <img className='w-40' src={img1} alt="" />

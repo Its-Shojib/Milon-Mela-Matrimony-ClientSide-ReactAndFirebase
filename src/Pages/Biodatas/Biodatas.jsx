@@ -15,7 +15,7 @@ const Biodatas = () => {
 
     let [biodataCollection] = useBioData();
     let total = biodataCollection?.length;
-    let maxvalue = Math.ceil(total/5);
+    let maxvalue = Math.ceil(total/20);
 
     const { data: allBiodataCollection = [], refetch } = useQuery({
         queryKey: ['allBiodataCollection'],
