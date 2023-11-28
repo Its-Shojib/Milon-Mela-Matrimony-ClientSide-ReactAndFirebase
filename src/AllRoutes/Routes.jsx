@@ -47,13 +47,13 @@ const router = createBrowserRouter([
             {
                 path: '/biodata/profile/:id',
                 element:<PrivateRoutes><ViewProfile></ViewProfile></PrivateRoutes>,
-                loader: ({params})=> fetch(`http://localhost:5000/biodata/profile/${params.id}`)
+                loader: ({params})=> fetch(`https://milon-mela-server.vercel.app/biodata/profile/${params.id}`)
 
             },
             {
                 path: '/checkout/:id',
                 element:<PrivateRoutes><Checkout></Checkout></PrivateRoutes>,
-                loader: ({params})=> fetch(`http://localhost:5000/checkout/${params.id}`)
+                loader: ({params})=> fetch(`https://milon-mela-server.vercel.app/checkout/${params.id}`)
 
             },
             {

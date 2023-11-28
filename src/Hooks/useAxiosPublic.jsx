@@ -1,7 +1,7 @@
 import axios from "axios";
 
 let axiosPublic = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://milon-mela-server.vercel.app'
 })
 
 const useAxiosPublic = () => {
