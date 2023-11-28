@@ -30,6 +30,7 @@
     "react-rating": "^2.0.5",
     "react-router-dom": "^6.20.0",
     "react-select": "^5.8.0",
+    "recharts": "^2.10.1",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.10.1",
     "swiper": "^11.0.5"
