@@ -50,19 +50,6 @@ const Biodatas = () => {
                 </div>
                 <div>
                     <p className=" text-xl font-bold text-white" >Gender</p>
-                    {/* <form >
-                        <div className="flex gap-10 text-white pl-5">
-                            <Radio
-                                name="gender"
-                                label="Male"
-                                value="male"
-                            />
-                            <Radio
-                                name="gender"
-                                value="female"
-                                label="Female" />
-                        </div>
-                    </form> */}
                     <form className="text-white">
                         <label>
                             <Radio
@@ -97,7 +84,7 @@ const Biodatas = () => {
                 </div>
             </div>
             <div className="w-9/12 bg-white min-h-screen">
-                <div className="grid grid-cols-1 md:grid-cols-2 px-2 md:p-5 gap-5 mx-auto h-screen overflow-y-scroll">
+                <div className="grid grid-cols-1 md:grid-cols-2 px-2 md:px-5 gap-5 mx-auto h-screen overflow-y-scroll">
                     {
                         Filtered?.map(item => <CardSection
                             key={item._id}

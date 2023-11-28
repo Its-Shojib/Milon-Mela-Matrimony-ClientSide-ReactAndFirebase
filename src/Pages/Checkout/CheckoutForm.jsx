@@ -82,7 +82,8 @@ const CheckoutForm = ({ userBiodata }) => {
 
                 // now save the payment in the database
                 const payment = {
-                    userEmail: user.email,
+                    userEmail: user?.email,
+                    userName: myBiodata.Name || user?.displayName,
                     transactionId: paymentIntent.id,
                     price: totalPrice,
                     reqBioId: userBiodata.bioId,
@@ -134,7 +135,7 @@ const CheckoutForm = ({ userBiodata }) => {
                         </label>
                         <Input
                             type="text"
-                            label={`Biodata Id: ${myBiodata?.bioId}`}
+                            label={myBiodata ? `Biodata Id: ${myBiodata?.bioId}`:'Please Update your Biodata ASAP'}
                             {...register('partnerName')}
                             className="w-full"
                             readOnly />
@@ -147,7 +148,7 @@ const CheckoutForm = ({ userBiodata }) => {
                         </label>
                         <Input
                             type="text"
-                            label={myBiodata?.email}
+                            label={myBiodata?.email || user?.email}
                             {...register('partnerName')}
                             className="w-full"
                             readOnly />
