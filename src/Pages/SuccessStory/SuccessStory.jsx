@@ -1,14 +1,20 @@
-import { Button, Card } from "@material-tailwind/react";
+import { Button, Card, DialogHeader } from "@material-tailwind/react";
 import { Helmet } from "react-helmet-async";
 import useSuccessStory from "../../Hooks/useSuccessStory";
-import { Dialog, DialogHeader, DialogBody, DialogFooter } from "@material-tailwind/react";
+import { Dialog, DialogBody, DialogFooter } from "@material-tailwind/react";
 import { useState } from "react";
 
 const SuccessStory = () => {
     const [open, setOpen] = useState(false);
-
-    const handleOpen = () => setOpen(!open);
+    let [SStory,setSStory] = useState('');
+    let [Names, setNames] = useState();
     let [SuccessStory] = useSuccessStory();
+    const handleOpen = (item) => {
+        let text = `${item.myName} 💕 ${item?.partnerName}`;
+        setSStory(item?.story);
+        setNames(text);
+        setOpen(!open)
+    };
     return (
         <div className="w-11/12 mx-auto my-10">
             <h1 className="text-center text-3xl font-bold text-red-900 my-5">| All Married couple are here |</h1>
@@ -20,8 +26,8 @@ const SuccessStory = () => {
                     <thead>
                         <tr className="">
                             <th className="border-b border-blue-gray-100 bg-blue-gray-50">Index</th>
-                            <th className="border-b border-blue-gray-100 bg-blue-gray-50">Name</th>
-                            <th className="border-b border-blue-gray-100 bg-blue-gray-50">Partner Name</th>
+                            <th className="border-b border-blue-gray-100 bg-blue-gray-50">Male Bio-Id</th>
+                            <th className="border-b border-blue-gray-100 bg-blue-gray-50">Female Bio-Id</th>
                             <th className="border-b border-blue-gray-100 bg-blue-gray-50">Marrige Date</th>
                             <th className="border-b border-blue-gray-100 bg-blue-gray-50">Story</th>
                         </tr>
@@ -31,33 +37,28 @@ const SuccessStory = () => {
                             SuccessStory?.map((item, index) => <tr key={item?._id}>
                                 <th className="p-4 border-b border-blue-gray-50">{index + 1}</th>
                                 <td className=" border-b border-blue-gray-50">
-                                    {item?.myName}
+                                    {item?.myBioId}
                                 </td>
                                 <td className="p-4 border-b border-blue-gray-50">
-                                    {item?.partnerName}
+                                    {item?.partnerBioId}
                                 </td>
                                 <td className="p-4 border-b border-blue-gray-50">
                                     {item?.marrigeDate}
                                 </td>
                                 <th className="p-4 border-b border-blue-gray-50">
-                                    <Button onClick={handleOpen}>View Story</Button>
-                                    <Dialog
-                                        open={open}
-                                        handler={handleOpen}
+                                    <Button onClick={()=>handleOpen(item)}>View Story</Button>
+                                    <Dialog open={open} handler={handleOpen}
                                         animate={{
                                             mount: { scale: 1, y: 0 },
                                             unmount: { scale: 0.9, y: -100 },
                                         }}
                                     >
-                                        <DialogHeader>{`${item?.myName} & ${item?.partnerName}`}</DialogHeader>
+                                        <DialogHeader>{Names}</DialogHeader>
                                         <DialogBody>
-                                            {item?.story}
+                                            {SStory}
                                         </DialogBody>
                                         <DialogFooter>
-                                            <Button
-                                                variant="text"
-                                                color="red"
-                                                onClick={handleOpen}
+                                            <Button variant="text" color="red" onClick={handleOpen}
                                                 className="mr-1"
                                             >
                                                 <span>Close</span>
@@ -67,7 +68,8 @@ const SuccessStory = () => {
                                 </th>
 
                             </tr>
-                            )}
+                            )
+                        }
                     </tbody>
                 </table>
 
