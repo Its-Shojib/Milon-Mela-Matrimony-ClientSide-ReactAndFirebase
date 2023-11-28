@@ -86,6 +86,8 @@ const CheckoutForm = ({ userBiodata }) => {
                     transactionId: paymentIntent.id,
                     price: totalPrice,
                     reqBioId: userBiodata.bioId,
+                    reqName: userBiodata.Name,
+                    status: 'pending',
                     reqEmail: 'pending',
                     reqPhone: 'pending'
                 }
