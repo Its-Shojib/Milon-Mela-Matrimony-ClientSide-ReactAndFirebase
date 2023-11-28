@@ -9,7 +9,7 @@ const ContactUs = () => {
     return (
         <div className="my-10 pt-1">
             <Helmet><title>Milon Mela | Contact Us</title></Helmet>
-            <Section_Title title={'Contact Us'} subTitle={'wanna know?'}></Section_Title>
+            <Section_Title title={'Contact Us'} subTitle={'Find Solution?'}></Section_Title>
 
             <div className="flex flex-col md:flex-row gap-10 items-center">
                 <div className="flex-1 text-left space-y-3">

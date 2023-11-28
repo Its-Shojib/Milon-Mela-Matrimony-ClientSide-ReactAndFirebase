@@ -28,10 +28,10 @@ const CardSection = ({ item }) => {
                 </div>
                 <div className="flex justify-between gap-5">
                     <Typography  variant="h6" color="white">
-                        Address: {PermanentDiv}
+                        Home: {PermanentDiv}
                     </Typography >
                     <Typography variant="h6" color="white">
-                        Ocupation: {Ocupation}
+                        Works: {Ocupation}
                     </Typography>
                 </div>
             </CardBody>
