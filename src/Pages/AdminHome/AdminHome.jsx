@@ -46,7 +46,7 @@ const AdminHome = () => {
 
     return (
         <div>
-            <Helmet>Milon Mela | Admin Home</Helmet>
+            <Helmet><title>Milon Mela | Admin Home</title></Helmet>
             <Section_Title title={'Admin Status'} subTitle={'all your'}></Section_Title>
             <div className="w-10/12 mx-auto grid grid-cols-2 gap-5 text-2xl mb-5">
                 <div className="bg-[#2f1e37] p-5 text-white rounded-xl">Total Biodata: {biodataCollection.length}</div>

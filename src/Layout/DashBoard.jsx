@@ -5,16 +5,12 @@ import { TbListDetails } from "react-icons/tb";
 import { MdOutlineWorkspacePremium } from "react-icons/md";
 import useAdmin from './../Hooks/useAdmin';
 import useAuth from '../Hooks/useAuth';
-import { Helmet } from 'react-helmet-async';
 
 const DashBoard = () => {
     let [isAdmin] = useAdmin();
     let {Logout} = useAuth()
     return (
         <div>
-            <Helmet>
-                <title>Milon Mela | DashBoard</title>
-            </Helmet>
             <div className="max-w-screen-xl mx-auto flex">
                 <div className="w-64 min-h-screen bg-[#172935] text-white">
                     <div className='text-center my-10'>

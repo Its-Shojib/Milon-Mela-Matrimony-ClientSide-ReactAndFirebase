@@ -155,7 +155,7 @@ const CheckoutForm = ({ userBiodata }) => {
                     </div>
                 </div>
                 <div>
-                    <CardElement
+                    <CardElement className="mt-8"
                         options={{
                             style: {
                                 base: {
@@ -171,8 +171,8 @@ const CheckoutForm = ({ userBiodata }) => {
                             },
                         }}
                     />
-                    <Button className="my-5" type="submit" disabled={!stripe || !clientSecret}>
-                        Pay
+                    <Button className="my-5 block mx-auto" type="submit" disabled={!stripe || !clientSecret}>
+                        Confirm Payment
                     </Button>
                     <p className="text-red-500">{payError}</p>
                     {

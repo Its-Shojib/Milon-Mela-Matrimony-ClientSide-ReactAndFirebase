@@ -69,7 +69,7 @@ const EditBioData = () => {
 
         <div>
             <Helmet>
-                <title>Milon-Mela | Edit Bio</title>
+                <title>Milon-Mela | Edit Biodata</title>
             </Helmet>
             <Section_Title title={'Extra-Ordinary'} subTitle={'Makes your bio'}></Section_Title>
             <div>

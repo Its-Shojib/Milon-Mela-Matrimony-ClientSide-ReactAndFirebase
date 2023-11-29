@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import useAuth from "../../Hooks/useAuth";
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 
 const ViewBioData = () => {
     let axiosSecure = useAxiosSecure();
@@ -62,7 +63,8 @@ const ViewBioData = () => {
         });
     }
     return (
-        <div className="w-9/12 mx-auto mt-5">
+        <div className="w-10/12 mx-auto mt-5">
+                <Helmet><title>Milon Mela | View Biodata</title></Helmet>
             <div className="w-72 mx-auto">
                 <Card className="h-64">
                     <CardHeader floated={false}>

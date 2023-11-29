@@ -7,6 +7,7 @@ import useAuth from "../../Hooks/useAuth";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import 'animate.css';
+import { Helmet } from "react-helmet-async";
 
 const ViewProfile = () => {
     let profile = useLoaderData();
@@ -52,6 +53,7 @@ const ViewProfile = () => {
     }
     return (
         <div className="flex flex-col md:flex-row gap-10">
+            <Helmet><title>Milon Mela | Profile</title></Helmet>
             <div className="flex-1">
                 <h1 className="text-center text-3xl font-bold underline text-red-700 my-5">Bio-Data</h1>
                 <div className="flex justify-between">
