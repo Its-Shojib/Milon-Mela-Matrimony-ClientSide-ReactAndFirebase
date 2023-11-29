@@ -61,10 +61,10 @@ const ViewProfile = () => {
                         <div className="flex justify-between flex-col-reverse md:flex-row">
                             <div className="flex-1">
                                 <h1 className="text-2xl font-bold">Personal Info</h1>
-                                <p>Bio-Id:{bioId}</p>
-                                <p>Name:{Name}</p>
+                                <p>Bio-Id: {bioId}</p>
+                                <p>Name: {Name}</p>
                                 <p>Father Name: {FaName}</p>
-                                <p>Mother Name:{MoName}</p>
+                                <p>Mother Name: {MoName}</p>
                                 <p>Date of Birth: {Dob}</p>
                                 <p>Age: {Age}</p>
                             </div>
@@ -73,17 +73,17 @@ const ViewProfile = () => {
                             </div>
                         </div>
                         <h1 className="text-2xl font-bold mt-5">Details</h1>
-                        <p>Race:{Race}</p>
-                        <p>Gender:{Gender}</p>
-                        <p>Ocupation:{Ocupation}</p>
-                        <p>Height:{Height}</p>
-                        <p>Weight:{Weight}</p>
-                        <p>Present Address:{PresentDiv}</p>
-                        <p>Permanent Address:{PermanentDiv}</p>
+                        <p>Race: {Race}</p>
+                        <p>Gender: {Gender}</p>
+                        <p>Ocupation: {Ocupation}</p>
+                        <p>Height: {Height}</p>
+                        <p>Weight: {Weight}</p>
+                        <p>Present Address: {PresentDiv}</p>
+                        <p>Permanent Address: {PermanentDiv}</p>
                         <h1 className="text-2xl font-bold mt-5">Expectations</h1>
-                        <p>Expected Partner Age:{PartnerAgeExp}</p>
+                        <p>Expected Partner Age: {PartnerAgeExp}</p>
                         <p>Expected Partner Height: {PartnerHeightExp}</p>
-                        <p>Expected Partner Weight:{PartnerWeightExp}</p>
+                        <p>Expected Partner Weight: {PartnerWeightExp}</p>
                         {
                             isPremium ? <>
                                 <h1 className="text-2xl font-bold mt-5">Contact Info</h1>
@@ -95,7 +95,7 @@ const ViewProfile = () => {
                         }
                         <div className="flex gap-10">
                             <Button onClick={() => handleAddToFavorite()} className="my-4">Add To Favorite</Button>
-                            {!isPremium && <Button onClick={()=> goto(`/checkout/${_id}`) }className="my-4">Request Contact Info</Button>}
+                            {!isPremium && <Button onClick={()=> goto(`/checkout/${_id}`) }className="my-4">Request for Contact Info</Button>}
                         </div>
                     </div>
 

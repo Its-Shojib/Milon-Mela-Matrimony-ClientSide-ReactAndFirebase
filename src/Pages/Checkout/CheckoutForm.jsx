@@ -4,7 +4,6 @@ import useAuth from "../../Hooks/useAuth";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import { Button, Input } from "@material-tailwind/react";
-import { useForm } from "react-hook-form";
 import { useQuery } from "@tanstack/react-query";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
@@ -18,7 +17,6 @@ const CheckoutForm = ({ userBiodata }) => {
     const elements = useElements();
     let { user } = useAuth();
     let goto = useNavigate();
-    const { register } = useForm();
     let axiosSecure = useAxiosSecure();
 
     let totalPrice = 500;
@@ -124,7 +122,6 @@ const CheckoutForm = ({ userBiodata }) => {
                         <Input
                             type="text"
                             label={`Biodata Id: ${userBiodata?.bioId}`}
-                            {...register('userBioId')}
                             className="w-full text-xl"
                             readOnly
                         />
@@ -136,7 +133,6 @@ const CheckoutForm = ({ userBiodata }) => {
                         <Input
                             type="text"
                             label={myBiodata ? `Biodata Id: ${myBiodata?.bioId}`:'Please Update your Biodata ASAP'}
-                            {...register('partnerName')}
                             className="w-full"
                             readOnly />
                     </div>
@@ -149,7 +145,6 @@ const CheckoutForm = ({ userBiodata }) => {
                         <Input
                             type="text"
                             label={myBiodata?.email || user?.email}
-                            {...register('partnerName')}
                             className="w-full"
                             readOnly />
                     </div>
