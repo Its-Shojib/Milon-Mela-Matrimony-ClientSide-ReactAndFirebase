@@ -5,14 +5,25 @@ import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 const Social_Login = () => {
 
-    let { googleSignIn } = useAuth();
+    let { googleSignIn, setLoading } = useAuth();
     let navigate = useNavigate();
     let axiosPublic = useAxiosPublic();
 
     let handleGoogleLogin = () => {
         googleSignIn()
             .then(result => {
-                // console.log(result.user);
+                let userInfo2 = {
+                    email: result?.user?.email
+                }
+                if (result?.user) {
+                    axiosPublic.post('/jwt', userInfo2)
+                        .then(res => {
+                            if (res.data.token) {
+                                localStorage.setItem('access-token', res.data.token);
+                                setLoading(false);
+                            }
+                        })
+                }
                 let userInfo = {
                     name: result.user?.displayName,
                     email: result.user?.email
@@ -27,7 +38,7 @@ const Social_Login = () => {
                                 confirmButtonText: 'Cool'
                             })
                         }
-                        else{
+                        else {
                             Swal.fire({
                                 title: 'Success!',
                                 text: `Welcome Back ${result.user?.displayName}`,

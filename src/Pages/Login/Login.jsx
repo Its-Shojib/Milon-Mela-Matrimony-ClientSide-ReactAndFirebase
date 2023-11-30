@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineMail } from 'react-icons/ai';
 import { RiLockPasswordFill } from 'react-icons/ri';
-import {  useState } from "react";
+import { useState } from "react";
 import { FaEyeSlash, FaEye } from 'react-icons/fa';
 import Lottie from "lottie-react";
 import Swal from 'sweetalert2';
@@ -11,14 +11,16 @@ import { Helmet } from "react-helmet-async";
 import Social_Login from "../../Shared-Compo/Social_Login";
 import useAuth from "../../Hooks/useAuth";
 import { Button } from "@material-tailwind/react";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 
 const Login = () => {
     let [showPassword, setShowPassword] = useState(false);
-    let { SignInUser } = useAuth();
+    let { SignInUser, setLoading } = useAuth();
     let navigate = useNavigate();
     let location = useLocation();
-    let from = location.state?.from?.pathname || '/'
+    let from = location.state?.from?.pathname || '/';
+    let axiosPublic = useAxiosPublic();
 
     let handleLogin = (e) => {
         e.preventDefault();
@@ -28,6 +30,18 @@ const Login = () => {
         SignInUser(email, password)
             .then(result => {
                 // console.log(result.user);
+                let userInfo = {
+                    email: email
+                }
+                if (result.user) {
+                    axiosPublic.post('/jwt', userInfo)
+                        .then(res => {
+                            if (res.data.token) {
+                                localStorage.setItem('access-token', res.data.token);
+                                setLoading(false);
+                            }
+                        })
+                }
                 e.target.reset();
                 Swal.fire({
                     title: 'Success!',
