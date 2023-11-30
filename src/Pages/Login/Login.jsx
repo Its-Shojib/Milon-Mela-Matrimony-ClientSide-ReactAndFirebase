@@ -27,11 +27,11 @@ const Login = () => {
 
         SignInUser(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 e.target.reset();
                 Swal.fire({
                     title: 'Success!',
-                    text: 'User Login Successfully',
+                    text: `Welcome Back ${result.user?.displayName}`,
                     icon: 'Success',
                     confirmButtonText: 'Cool'
                 })

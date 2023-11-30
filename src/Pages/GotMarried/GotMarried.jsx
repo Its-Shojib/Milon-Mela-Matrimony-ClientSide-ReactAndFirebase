@@ -33,7 +33,7 @@ const GotMarried = () => {
             let time = Math.abs(date2 - currentDate);
             let days = Math.ceil(time / (1000 * 60 * 60 * 24));
             let rating = parseInt(data?.rating)
-            console.log(days);
+            // console.log(days);
             const successStory = {
                 myName: data?.myName,
                 partnerName: data?.partnerName,
@@ -46,9 +46,9 @@ const GotMarried = () => {
                 story: data?.story,
                 myEmail: user?.email,
             }
-            console.log(successStory);
+            // console.log(successStory);
             const successStoryRes = await axiosSecure.post('/successStory', successStory);
-            console.log(successStoryRes.data)
+            // console.log(successStoryRes.data)
             if (successStoryRes?.data?.insertedId) {
                 reset();
                 Swal.fire({
@@ -61,7 +61,7 @@ const GotMarried = () => {
             }
         }
         
-        console.log('with image url', res.data);
+        // console.log('with image url', res.data);
     };
     return (
         <div>

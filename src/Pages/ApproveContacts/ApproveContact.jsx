@@ -30,7 +30,7 @@ const ApproveContact = () => {
             if (result.isConfirmed) {
                 axiosSecure.patch(`/requestedUser/approve/${id}`)
                     .then(res => {
-                        console.log(res.data);
+                        // console.log(res.data);
                         if (res.data.modifiedCount > 0) {
                             Swal.fire({
                                 title: "Approved!",

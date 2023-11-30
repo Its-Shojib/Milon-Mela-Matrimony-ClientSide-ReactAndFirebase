@@ -54,7 +54,7 @@ const Biodatas = () => {
     };
 
     let handleDivisionSearch = (selectedValue) => {
-        console.log(selectedValue);
+        // console.log(selectedValue);
         let DivisionFilter = allBiodataCollection.filter((item) => item?.PermanentDiv == selectedValue)
         setFiltered(DivisionFilter);
     }

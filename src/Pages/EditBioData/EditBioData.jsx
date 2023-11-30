@@ -16,7 +16,7 @@ const EditBioData = () => {
     const axiosSecure = useAxiosSecure();
     let { user } = useAuth()
     const onSubmit = async (data) => {
-        console.log(data)
+        // console.log(data)
         // image upload to imgbb and then get an url
         const imageFile = { image: data.image[0] }
         const res = await axiosPublic.post(image_hosting_api, imageFile, {
@@ -47,9 +47,9 @@ const EditBioData = () => {
                 email: data?.email,
                 Mobile: data?.phone,
             }
-            console.log(biodatas);
+            // console.log(biodatas);
             const biodataRes = await axiosSecure.patch(`/edit-biodata/${user?.email}`, biodatas);
-            console.log(biodataRes.data)
+            // console.log(biodataRes.data)
             if (biodataRes?.data?.modifiedCount || biodataRes?.data?.upsertedCount || biodataRes?.data?.matchedCount) {
                 reset();
                 Swal.fire({
@@ -62,7 +62,7 @@ const EditBioData = () => {
             }
         }
 
-        console.log('with image url', res.data);
+        // console.log('with image url', res.data);
     };
 
     return (

@@ -29,8 +29,8 @@ const ApprovePremium = () => {
             if (result.isConfirmed) {
                 axiosSecure.patch(`/biodata/premium/${email}`)
                     .then(res => {
-                        console.log(res.data);
-                        if (res.data.modifiedCount > 0 ||res.data.matchedCount) {
+                        // console.log(res.data);
+                        if (res.data.modifiedCount > 0 || res.data.matchedCount) {
                             axiosSecure.delete(`/premiumReqDelete/${email}`)
                                 .then(res => {
                                     if (res.data.deletedCount > 0) {
