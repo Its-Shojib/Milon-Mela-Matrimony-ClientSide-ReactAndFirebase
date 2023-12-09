@@ -18,3 +18,7 @@
 * **Dashboard:** There are tw types of dashboard here. User Dashboard, Admin Dashboard.
 * **Got Married:** User can add got married status to share a review about this website and his/her personal story.
 * **Dynamic Login-Logout:** If you just view our website you will find only home, and login pages... 
+
+# Technology Used:
+
+* **React Js , Node Js, MongoDB, Express Js, Firebase, JSON Web Token, Tailwind**
