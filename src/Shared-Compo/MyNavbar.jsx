@@ -96,7 +96,7 @@ const MyNavbar = () => {
 
 
   return (
-    <Navbar className="fixed top-0 z-10 h-max bg-[#172935] max-w-screen-2xl">
+    <Navbar className="fixed top-0 z-10 h-max bg-[#172935] max-w-full">
       <div className="flex items-center justify-between ">
         <img className="w-64 h-12" src={img} alt="" />
         <div className="flex items-center gap-4">

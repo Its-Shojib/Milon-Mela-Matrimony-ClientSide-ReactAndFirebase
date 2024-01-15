@@ -11,7 +11,7 @@ const DashBoard = () => {
     let {Logout} = useAuth()
     return (
         <div>
-            <div className="max-w-screen-3xl mx-auto flex">
+            <div className="max-w-full mx-auto flex">
                 <div className="w-64 h-screen bg-[#172935] text-white sticky top-0">
                     <div className='text-center my-10'>
                         <h1 className='text-3xl font-bold'>Milon Mela</h1>

@@ -117,7 +117,7 @@ const Biodatas = () => {
                     </div>
                 </div>
                 <div className="w-9/12 bg-white min-h-screen">
-                    <div className="grid grid-cols-1 md:grid-cols-2 px-2 md:px-5 gap-5 mx-auto h-screen overflow-y-scroll">
+                    <div className="grid grid-cols-1 md:grid-cols-3 px-2 gap-5 mx-auto h-screen overflow-y-scroll">
                         {
                             Filtered?.map(item => <CardSection
                                 key={item._id}

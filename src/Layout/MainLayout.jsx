@@ -7,13 +7,13 @@ import MyNavbar from "../Shared-Compo/MyNavbar";
 const MainLayout = () => {
     return (
         <div>
-            <div className="max-w-screen-2xl mx-auto">
+            <div className="max-w-full mx-auto">
                 <MyNavbar></MyNavbar>
             </div>
-            <div className="max-w-screen-2xl mx-auto mt-[82px]">
+            <div className="max-w-full mx-auto mt-[82px] px-2">
                 <Outlet></Outlet>
             </div>
-            <div className="max-w-screen-2xl mx-auto">
+            <div className="max-w-full mx-auto">
                 <Footer></Footer>
             </div>
         </div>
