@@ -11,8 +11,8 @@ const DashBoard = () => {
     let {Logout} = useAuth()
     return (
         <div>
-            <div className="max-w-screen-xl mx-auto flex">
-                <div className="w-64 min-h-screen bg-[#172935] text-white">
+            <div className="max-w-screen-3xl mx-auto flex">
+                <div className="w-64 h-screen bg-[#172935] text-white sticky top-0">
                     <div className='text-center my-10'>
                         <h1 className='text-3xl font-bold'>Milon Mela</h1>
                         <p className='text-xl'>Matrimony</p>
@@ -104,7 +104,7 @@ const DashBoard = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="flex-1 bg-gray-200">
+                <div className="flex-1 bg-gray-200 overflow-y-scroll">
                     <Outlet></Outlet>
                 </div>
 

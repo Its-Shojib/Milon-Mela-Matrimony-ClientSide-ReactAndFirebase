@@ -52,9 +52,9 @@ const ViewProfile = () => {
             });
     }
     return (
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col md:flex-row gap-3">
             <Helmet><title>Milon Mela | Profile</title></Helmet>
-            <div className="flex-1">
+            <div className="w-5/12">
                 <h1 className="text-center text-3xl font-bold underline text-red-700 my-5">Bio-Data</h1>
                 <div className="flex justify-between">
                     <div className="px-2">
@@ -69,7 +69,7 @@ const ViewProfile = () => {
                                 <p>Age: {Age}</p>
                             </div>
                             <div className="w-full md:w-5/12">
-                                <img className="w-full md:w-52 h-48 md:ml-20" src={Image} alt="" />
+                                <img className="w-full md:w-52 h-48 " src={Image} alt="" />
                             </div>
                         </div>
                         <h1 className="text-2xl font-bold mt-5">Details</h1>
@@ -102,7 +102,7 @@ const ViewProfile = () => {
                 </div>
             </div>
             <div className="flex-1">
-                <div className="w-10/12 mx-auto h-screen overflow-y-scroll">
+                <div className="w-full mx-auto h-screen overflow-y-scroll grid grid-cols-2 gap-2">
                     {
                         dataOfGender?.map(item => <CardSection
                             key={item._id}
