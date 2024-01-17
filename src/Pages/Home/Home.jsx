@@ -12,21 +12,22 @@ import Section_Title from "../../Shared-Compo/Section_Title";
 const Home = () => {
     // let axiosSecure = useAxiosSecure();
     let axiosPublic = useAxiosPublic()
-    const {  data = [] } = useQuery({
+    const { data = [] } = useQuery({
         queryKey: ['biodataPremium'],
-        queryFn: async () =>{
+        queryFn: async () => {
             const res = await axiosPublic.get('/biodata/premium');
             return res.data;
         }
     })
 
+
     return (
         <div>
             <Helmet><title>Milon Mela | Home</title></Helmet>
             <Banner></Banner>
-            
+
             <Section_Title title={'Premium Biodata'} subTitle={'find your matched'}></Section_Title>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-2 gap-10">
+            <div  className="w-full md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-2 gap-10">
                 {
                     data?.map(item => <CardSection
                         key={item._id}

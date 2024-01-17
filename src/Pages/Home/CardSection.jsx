@@ -7,7 +7,7 @@ const CardSection = ({ item }) => {
     let { bioId, _id, Image, Gender, Age, Ocupation, PermanentDiv } = item;
 
     return (
-        <Card className="mt-6 bg-[#15242f]">
+        <Card  className="mt-6 bg-[#15242f]">
             <CardHeader color="white" className="mt-5">
                 <img className="h-64 w-full"
                     src={Image}

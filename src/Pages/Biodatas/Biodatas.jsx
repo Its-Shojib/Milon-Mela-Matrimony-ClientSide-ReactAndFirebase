@@ -7,7 +7,6 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import useBioData from "../../Hooks/useBioData";
 
-
 const Biodatas = () => {
     let axiosPublic = useAxiosPublic();
     let [Filtered, setFiltered] = useState();
