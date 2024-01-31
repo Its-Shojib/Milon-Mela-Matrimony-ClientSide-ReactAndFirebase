@@ -23,7 +23,6 @@ const Biodatas = () => {
             return res.data;
         }
     })
-
     const next = () => {
         if (active === maxvalue) return;
         setActive(active + 1);
