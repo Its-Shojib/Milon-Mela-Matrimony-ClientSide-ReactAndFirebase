@@ -33,7 +33,6 @@ const Biodatas = () => {
         setActive(active - 1);
         refetch();
     };
-
     useEffect(()=>{
             refetch()
     },[active,refetch])
