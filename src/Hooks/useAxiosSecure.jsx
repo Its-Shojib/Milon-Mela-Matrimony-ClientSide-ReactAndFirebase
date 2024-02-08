@@ -7,7 +7,6 @@ let axiosSecure = axios.create({
     baseURL: 'https://milon-mela-server.vercel.app',
     withCredentials: true
 })
-
 const useAxiosSecure = () => {
     let navigate = useNavigate();
     let {Logout} = useAuth();
