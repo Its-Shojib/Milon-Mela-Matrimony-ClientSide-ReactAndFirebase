@@ -5,8 +5,6 @@ import { PieChart, Pie, Cell, Legend } from 'recharts';
 import { Helmet } from "react-helmet-async";
 import Section_Title from "../../Shared-Compo/Section_Title";
 
-
-
 const AdminHome = () => {
     let axiosSecure = useAxiosSecure();
     let [biodataCollection] = useBioData();
