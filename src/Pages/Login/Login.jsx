@@ -29,7 +29,6 @@ const Login = () => {
 
         SignInUser(email, password)
             .then(result => {
-                // console.log(result.user);
                 let userInfo = {
                     email: email
                 }
