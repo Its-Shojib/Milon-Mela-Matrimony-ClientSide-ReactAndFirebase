@@ -24,7 +24,6 @@ const CheckoutForm = ({ userBiodata }) => {
     useEffect(() => {
         axiosSecure.post('/create-payment-intent', { price: totalPrice })
             .then(res => {
-                // console.log(res.data?.clientSecret);
                 setClientSecet(res.data.clientSecret)
             })
     }, [axiosSecure, totalPrice])
@@ -93,7 +92,6 @@ const CheckoutForm = ({ userBiodata }) => {
                 // console.log(payment);
                 axiosSecure.post('/payment', payment)
                     .then(res => {
-                        // console.log(res.data);
                         if (res.data?.insertedId) {
                             Swal.fire({
                                 position: "top-middle",
