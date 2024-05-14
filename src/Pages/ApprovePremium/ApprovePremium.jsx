@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet-async";
 import Section_Title from "../../Shared-Compo/Section_Title";
 
 const ApprovePremium = () => {
-
     let axiosSecure = useAxiosSecure();
     const { data: premiumReqUser = [], refetch } = useQuery({
         queryKey: ['premiumReqUser'],
