@@ -138,11 +138,6 @@ const EditBioData = () => {
                                 <label className="label">
                                     <span className="label-text">Height*</span>
                                 </label>
-                                {/* <Select className="w-full"
-                                    required
-                                    {...register('height', { required: true })}
-                                    options={Height}
-                                /> */}
                                 <select defaultValue="default" {...register('height', { required: true })}
                                     className="select select-bordered w-full py-2">
                                     <option disabled value="default">Select Height</option>
@@ -161,11 +156,6 @@ const EditBioData = () => {
                                 <label className="label">
                                     <span className="label-text">Weight*</span>
                                 </label>
-                                {/* <Select className="w-full"
-                                    required
-                                    {...register('weight', { required: true })}
-                                    options={Weight}
-                                /> */}
                                 <select defaultValue="default" {...register('weight', { required: true })}
                                     className="select select-bordered w-full py-2">
                                     <option disabled value="default">Select Weight</option>
@@ -182,11 +172,6 @@ const EditBioData = () => {
                                 <label className="label">
                                     <span className="label-text">Ocupation*</span>
                                 </label>
-                                {/* <Select className="w-full"
-                                    required
-                                    {...register('ocupation', { required: true })}
-                                    options={Ocupation}
-                                /> */}
                                 <select defaultValue="default" {...register('ocupation', { required: true })}
                                     className="select select-bordered w-full py-2">
                                     <option disabled value="default">Select Ocupation</option>
@@ -199,11 +184,6 @@ const EditBioData = () => {
                                 <label className="label">
                                     <span className="label-text">Race*</span>
                                 </label>
-                                {/* <Select className="w-full"
-                                    required
-                                    {...register('race', { required: true })}
-                                    options={Race}
-                                /> */}
                                 <select defaultValue="default" {...register('race', { required: true })}
                                     className="select select-bordered w-full py-2">
                                     <option disabled value="default">Select Race</option>
@@ -218,11 +198,6 @@ const EditBioData = () => {
                                 <label className="label">
                                     <span className="label-text">Permanent Division*</span>
                                 </label>
-                                {/* <Select className="w-full"
-                                    required
-                                    {...register('per-division', { required: true })}
-                                    options={Division}
-                                /> */}
                                 <select defaultValue="default" {...register('permanentDiv', { required: true })}
                                     className="select select-bordered w-full py-2">
                                     <option disabled value="default">Select Division</option>
@@ -240,11 +215,6 @@ const EditBioData = () => {
                                 <label className="label">
                                     <span className="label-text">Present Division*</span>
                                 </label>
-                                {/* <Select className="w-full"
-                                    required
-                                    {...register('pre-division', { required: true })}
-                                    options={Division}
-                                /> */}
                                 <select defaultValue="default" {...register('presentDiv', { required: true })}
                                     className="select select-bordered w-full py-2">
                                     <option disabled value="default">Select Division</option>
@@ -286,11 +256,6 @@ const EditBioData = () => {
                                 <label className="label">
                                     <span className="label-text">Partner Height* (Expected)</span>
                                 </label>
-                                {/* <Select className="w-full"
-                                    required
-                                    {...register('partner-height', { required: true })}
-                                    options={Height}
-                                /> */}
                                 <select defaultValue="default" {...register('partnerHeight', { required: true })}
                                     className="select select-bordered w-full py-2">
                                     <option disabled value="default">Select Height</option>
@@ -309,11 +274,6 @@ const EditBioData = () => {
                                 <label className="label">
                                     <span className="label-text">Partner Weight* (Expected)</span>
                                 </label>
-                                {/* <Select className="w-full"
-                                    required
-                                    {...register('partner-weight', { required: true })}
-                                    options={Weight}
-                                /> */}
                                 <select defaultValue="default" {...register('partnerWeight', { required: true })}
                                     className="select select-bordered w-full py-2">
                                     <option disabled value="default">Select Weight</option>
