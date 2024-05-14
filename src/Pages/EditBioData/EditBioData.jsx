@@ -16,8 +16,6 @@ const EditBioData = () => {
     const axiosSecure = useAxiosSecure();
     let { user } = useAuth()
     const onSubmit = async (data) => {
-        // console.log(data)
-        // image upload to imgbb and then get an url
         const imageFile = { image: data.image[0] }
         const res = await axiosPublic.post(image_hosting_api, imageFile, {
             headers: {
@@ -25,7 +23,6 @@ const EditBioData = () => {
             }
         });
         if (res.data.success) {
-            // now send the menu item data to the server with the image url
             let Age = parseInt(data?.age)
             const biodatas = {
                 Name: data?.name,
