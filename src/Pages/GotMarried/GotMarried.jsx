@@ -17,7 +17,6 @@ const GotMarried = () => {
     const axiosSecure = useAxiosSecure();
     let { user } = useAuth()
     const onSubmit = async (data) => {
-        // image upload to imgbb and then get an url
         const imageFile = { image: data.image[0] }
         const res = await axiosPublic.post(image_hosting_api, imageFile, {
             headers: {
@@ -25,15 +24,12 @@ const GotMarried = () => {
             }
         });
         if (res.data.success) {
-            // now send the menu item data to the server with the image url
-
             let currentDate = new Date();
             let marrigeDate = data?.marrigeDate;
             let date2 = new Date(marrigeDate)
             let time = Math.abs(date2 - currentDate);
             let days = Math.ceil(time / (1000 * 60 * 60 * 24));
             let rating = parseInt(data?.rating)
-            // console.log(days);
             const successStory = {
                 myName: data?.myName,
                 partnerName: data?.partnerName,
@@ -46,9 +42,7 @@ const GotMarried = () => {
                 story: data?.story,
                 myEmail: user?.email,
             }
-            // console.log(successStory);
             const successStoryRes = await axiosSecure.post('/successStory', successStory);
-            // console.log(successStoryRes.data)
             if (successStoryRes?.data?.insertedId) {
                 reset();
                 Swal.fire({
@@ -60,8 +54,6 @@ const GotMarried = () => {
                 });
             }
         }
-        
-        // console.log('with image url', res.data);
     };
     return (
         <div>
