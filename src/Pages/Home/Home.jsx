@@ -10,7 +10,6 @@ import { Helmet } from "react-helmet-async";
 import Section_Title from "../../Shared-Compo/Section_Title";
 
 const Home = () => {
-    // let axiosSecure = useAxiosSecure();
     let axiosPublic = useAxiosPublic()
     const { data = [] } = useQuery({
         queryKey: ['biodataPremium'],
