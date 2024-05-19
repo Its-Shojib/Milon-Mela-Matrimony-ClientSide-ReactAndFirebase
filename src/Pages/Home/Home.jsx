@@ -17,9 +17,8 @@ const Home = () => {
             const res = await axiosPublic.get('/biodata/premium');
             return res.data;
         }
-    })
-
-
+    });
+    
     return (
         <div>
             <Helmet><title>Milon Mela | Home</title></Helmet>
